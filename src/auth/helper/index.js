@@ -38,12 +38,12 @@ export const authenticate = (data, next) => {
 };
 
 //SIGNOUT ACT AS A MIDDLEWARE
-export const signout = async (next) => {
+export const signout = (next) => {
   if (typeof window == "undefined") {
     localStorage.removeItem("jwt");
     next();
   }
-  return await fetch(`${API}/signout`, {
+  return fetch(`${API}/signout`, {
     method: "GET",
   })
     .then((res) => console.log(res))

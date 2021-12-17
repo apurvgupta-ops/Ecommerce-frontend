@@ -18,6 +18,11 @@ const AdminDashboard = () => {
             </Link>
           </li>
           <li className="list-group-item">
+            <Link to="/admin/categories" className="nav-link text-success">
+              Manage Categories
+            </Link>
+          </li>
+          <li className="list-group-item">
             <Link to="/admin/create/products" className="nav-link text-success">
               Create Products
             </Link>
@@ -43,15 +48,15 @@ const AdminDashboard = () => {
         <h4 className="card-header">Admin Information</h4>
         <ul className="list-group">
           <li className="list-group-item">
-            <span className="badge badge-success mr-2">Name:</span>
+            <span className="badge badge-success mr-2">Name: </span>
             {name}
           </li>
           <li className="list-group-item">
-            <span className="badge badge-success mr-2">Email:</span>
+            <span className="badge badge-success mr-2">Email: </span>
             {email}
           </li>
           <li className="list-group-item">
-            <span className="badge badge-primary">Admin Area</span>
+            <span className="badge badge-primary">Admin Area </span>
           </li>
         </ul>
       </div>

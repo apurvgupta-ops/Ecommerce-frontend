@@ -10,6 +10,10 @@ import PrivateRoute from "./auth/helper/PrivateRoute";
 import Home from "./core/Home";
 import UserDashboard from "./user/UserDashboard";
 import AdminDashboard from "./user/AdminDashBoard";
+import AddCategory from "./admin/AddCategory";
+import AddProduct from "./admin/AddProduct";
+import ManageProducts from "./admin/ManageProduct";
+import { updateProduct } from "./admin/helper/adminapicall";
 
 const Navigation = () => {
   return (
@@ -21,6 +25,22 @@ const Navigation = () => {
         <Route exact path="/signup" component={Signup} />
         <PrivateRoute exact path="/user/dashboard" component={UserDashboard} />
         <AdminRoute exact path="/admin/dashboard" component={AdminDashboard} />
+        <AdminRoute
+          exact
+          path="/admin/create/category"
+          component={AddCategory}
+        />
+        <AdminRoute
+          exact
+          path="/admin/create/products"
+          component={AddProduct}
+        />
+        <AdminRoute exact path="/admin/products" component={ManageProducts} />
+        <AdminRoute
+          exact
+          path="/admin/product/update/:productId"
+          component={updateProduct}
+        />
       </Switch>
     </BrowserRouter>
   );
