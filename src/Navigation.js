@@ -13,7 +13,8 @@ import AdminDashboard from "./user/AdminDashBoard";
 import AddCategory from "./admin/AddCategory";
 import AddProduct from "./admin/AddProduct";
 import ManageProducts from "./admin/ManageProduct";
-import { updateProduct } from "./admin/helper/adminapicall";
+import Cart from "./core/Cart";
+import updateProduct from "./admin/UpdateProduct";
 
 const Navigation = () => {
   return (
@@ -23,6 +24,7 @@ const Navigation = () => {
         <Route exact path="/" component={Home} />
         <Route exact path="/signin" component={Signin} />
         <Route exact path="/signup" component={Signup} />
+        <Route exact path="/cart" component={Cart} />
         <PrivateRoute exact path="/user/dashboard" component={UserDashboard} />
         <AdminRoute exact path="/admin/dashboard" component={AdminDashboard} />
         <AdminRoute
