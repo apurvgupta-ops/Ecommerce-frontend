@@ -4,6 +4,7 @@ import { API } from "../backend";
 import Base from "./Base";
 import Card from "./Card";
 import { loadCart } from "./helper/cartHelper";
+import StripCheckout from "./StripCheckout";
 
 const Home = () => {
   // console.log("API IS", API);
@@ -46,7 +47,9 @@ const Home = () => {
     <Base title="Cart page" description="Ready for Checkout">
       <div className="row text-center m-4 p-4">
         <div className="col-6">{loadAllProducts()}</div>
-        <div className="col-6">{loadAllCheckouts()}</div>
+        <div className="col-6">
+          <StripCheckout />
+        </div>
       </div>
     </Base>
   );
